@@ -2,3 +2,6 @@
 add 把变更录入到索引中
 commit 记录索引的内容 from issue2
 pull 取得远端仓库的内容
+
+在github上面做了修改，
+需要fetch到本地并merge成功
