@@ -1,23 +1,26 @@
 #include <iostream>
+#include "func.h"
 using std::cout;
 using std::cin; 
 using std::endl;
 
-int fibonacci(int length){
-    int a =0;
-    int b=1;
-    for (int i =0; i<length;i++){
-        int tmp = a;
-        a=b;
-        b= tmp+b;
+
+int main(){
+    int func_nums = 0;
+    int op_ldz[6];
+    while (func_nums<100){
+        func_nums = count_calls();
+        cout<<"you are using while now "<<func_nums<<endl;
     }
-    return b;
+    int word;
+    for (int i =0;i<6;i++){
+        cout<<"请输入一个数："<<endl;
+        cin >> word;
+        op_ldz[i]=word;
+    }
+    array_op(op_ldz,6);
+
+
 }
 
-int main (){
-    int len=10;
-   cout<<"you are using fibonacci func to cal len =10 "<<endl;
-  int res=fibonacci(len) ;
-    cout << "now you have a value of result is :"<< res<<endl;
-    return 0;
-}
+//编译的命令是g++ main.cc ./src/func.cc -I./include -o main
