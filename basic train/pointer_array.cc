@@ -80,16 +80,18 @@ int main (){
         case 3: cout << "haha"<<endl; cout <<"no"<<endl; break;
         default:cout<<"default value is "<<endl;break;
     }
-    vector<int> v;
+    vector<int> v={1,2,3,4};
     cout<<"请输入一个值： "<<endl;
     while(cin>>input_num){
         v.push_back(input_num);
     }
-    auto beg = v.begin();
-    while (beg!=v.end())
+
+    decltype(v.begin()) beg_ldz = v.begin();
+    while (beg_ldz!=v.end())
     {
-        ++beg;
-        cout<<"the value of beg is :"<<*beg<<endl;
+        ++beg_ldz;
+        cout<<"the value of beg is :"<<*beg_ldz<<endl;
     }
+
     
 }
